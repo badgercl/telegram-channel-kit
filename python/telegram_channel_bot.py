@@ -8,7 +8,7 @@ import json
 def send_post(txt):
     url = "https://api.telegram.org/bot{}/sendMessage"
     u = url.format(telegram_config.bot_token)
-    p = {'chat_id':telegram_config.channel_id,'parse_mode':'html','disable_web_page_preview':True, 'text':txt}
+    p = {'chat_id':telegram_config.channel_id,'parse_mode':telegram_config.parse_mode,'disable_web_page_preview':True, 'text':txt}
     r = requests.post(u,data=p)
     if r.status_code == 200:
         if telegram_config.show_output:
