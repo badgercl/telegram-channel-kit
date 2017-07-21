@@ -2,7 +2,7 @@
 require_once('telegram_config.php');
 function send_post($txt){
 	$url = "https://api.telegram.org/bot".TelegramBotConfig::$bot_token."/sendMessage";
-	$url .= "?chat_id=".TelegramBotConfig::$channel_id."&parse_mode=".TelegramBotConfig::$parse_mode."&disable_web_page_preview=true&text=$txt";
+	$url .= "?chat_id=".TelegramBotConfig::$channel_id."&parse_mode=".TelegramBotConfig::$parse_mode."&disable_web_page_preview=true&text=".urlencode($txt);
 	$res = file_get_contents($url);
 	if($res){
 		if(TelegramBotConfig::$show_output){
