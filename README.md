@@ -12,7 +12,7 @@ Create a channel from the Telegram. It's up to you whether you create an usernam
 Then add the bot as channel administrator and make sure it has at least posting permissions.
 
 ## Step 4: Get the channel UID 
-In case your channel or you haven't created the channel with an username (the custom name to show on the invite link) you should get the IUD of the channel. In other case skip this step.
+In case your channel is private or you haven't created the channel with an username (the custom name shown on the invite link) you should get the channel's UID. In other case skip this step.
 
 Once the bot is added to the channel, write anything on the channel from the Telegram app. Then run the get_updates script. It retrieves the last command and messages sent to the bot. You should get a result that looks like:
 
